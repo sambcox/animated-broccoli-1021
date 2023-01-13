@@ -7,3 +7,10 @@
 
 <h3>This Doctor works for:</h3>
 <%= @doctor.hospital.name %>
+
+<h3>Patient List:</h3>
+<ul>
+  <% @doctor.patients.each do |patient| %>
+    <li><%= patient.name %></li>
+  <% end %>
+</ul>
