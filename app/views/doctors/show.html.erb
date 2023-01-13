@@ -11,6 +11,6 @@
 <h3>Patient List:</h3>
 <ul>
   <% @doctor.patients.each do |patient| %>
-    <li><%= patient.name %></li>
+    <li id="patient_<%= patient.id %>"><%= patient.name %></li>
   <% end %>
 </ul>
