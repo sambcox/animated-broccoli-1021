@@ -28,14 +28,14 @@ RSpec.describe 'Doctor Show' do
     visit doctor_path(@doctor_1)
 
     expect(page).to have_content(@doctor_1.name)
-    expect(page).to have_content(@doctor_1.speciality)
+    expect(page).to have_content(@doctor_1.specialty)
     expect(page).to have_content(@doctor_1.university)
     expect(page).to_not have_content(@doctor_2.name)
 
     visit doctor_path(@doctor_2)
 
     expect(page).to have_content(@doctor_2.name)
-    expect(page).to have_content(@doctor_2.speciality)
+    expect(page).to have_content(@doctor_2.specialty)
     expect(page).to have_content(@doctor_2.university)
     expect(page).to_not have_content(@doctor_1.name)
   end
